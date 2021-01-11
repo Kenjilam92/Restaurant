@@ -1,0 +1,33 @@
+
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<div class="restaurant2 p-4">
+<table class="table opacity-dark text-white ">
+    <thead>
+        <th>Sections</th>
+        <th>Name</th>
+        <th>Create At</th>
+        <th>Update At</th>
+        <th>Action </th>
+    </thead>
+    <tbody>
+        @foreach (var dish in ViewBag.Dishes)
+        {
+            <tr>
+                <td>@dish.Type</td>
+                <td>@dish.DishName</td>
+                <td>@dish.CreateAt</td>
+                <td>@dish.UpdateAt</td>
+                <td>
+                    <nav class="btn-group">
+                        <a href="/dish/edit/@dish.DishId" class="btn btn-success">Update</a>
+                        <a href="/dish/remove/@dish.DishId"class="btn btn-danger">Delete</a>
+                    </nav>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

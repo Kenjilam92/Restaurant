@@ -1,0 +1,125 @@
+@{
+    ViewData["Title"] = "Menu";
+}
+@* <div class="container"> *@
+<div class="slideshow-container text-white">
+    <div class=" mySlides p-5 appetizers">
+        <div class="opacity-dark p-2 w-100 fullHeight">
+           <h2 class="text-center mb-4 text-warning">Appetizers</h2>
+            <table class="table table-borderless text-white">
+                <thead >
+                    <tr class="text-center row justify-content-around h4 ">
+                        <th class="col-4">Name</th>
+                        <th class="col-2">Price</th>
+                        <th class="col-5">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dish in ViewBag.Dishes)
+                    {
+                        @if (dish.Type == "Appetizers")
+                        {
+                        <tr class="row justify-content-around">
+                            <td class="col-4">
+                                <span class="text-warning h5">@dish.DishName</span>
+                                <br>
+                                <i>@dish.Ingredients</i>
+                            </td>
+                            <td class="col-2 text-center"> 
+                                <span class="text-warning h5"> $@dish.Price </span>
+                            </td>
+                            <td class="col-5 text-right">
+                                <i>@dish.Description</i>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mySlides p-5 entree">
+       <div class="opacity-dark p-2 w-100 fullHeight">
+           <h2 class="text-center mb-4 text-warning">Entrées</h2>
+            <table class="table table-borderless text-white">
+                <thead >
+                    <tr class="text-center row justify-content-around h4 ">
+                        <th class="col-4">Name</th>
+                        <th class="col-2">Price</th>
+                        <th class="col-5">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dish in ViewBag.Dishes)
+                    {
+                        @if (dish.Type == "Entrées")
+                        {
+                        <tr class="row justify-content-around">
+                            <td class="col-4">
+                                <span class="text-warning h5">@dish.DishName</span>
+                                <br>
+                                <i>@dish.Ingredients</i>
+                            </td>
+                            <td class="col-2 text-center"> 
+                                <span class="text-warning h5"> $@dish.Price </span>
+                            </td>
+                            <td class="col-5 text-right">
+                                <i>@dish.Description</i>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mySlides p-5 dessert">
+        <div class="opacity-dark p-2 w-100 fullHeight">
+           <h2 class="text-center mb-4 text-warning">Desserts</h2>
+            <table class="table table-borderless text-white">
+                <thead >
+                    <tr class="text-center row justify-content-around h4 ">
+                        <th class="col-4">Name</th>
+                        <th class="col-2">Price</th>
+                        <th class="col-5">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dish in ViewBag.Dishes)
+                    {
+                        @if (dish.Type == "Desserts")
+                        {
+                        <tr class="row justify-content-around">
+                            <td class="col-4">
+                                <span class="text-warning h5">@dish.DishName</span>
+                                <br>
+                                <i>@dish.Ingredients</i>
+                            </td>
+                            <td class="col-2 text-center"> 
+                                <span class="text-warning h5"> $@dish.Price </span>
+                            </td>
+                            <td class="col-5 text-right">
+                                <i>@dish.Description</i>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+</div>
+@section scripts {
+    <script src ="~/js/slideshow.js" asp-append-version="true"></script>
+}

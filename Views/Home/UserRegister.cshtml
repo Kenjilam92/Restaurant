@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Register";
+}
+@model User
+<form action="/register" class="col col-md-6" method="post">      
+    <div class="d-flex align-items-baseline mb-3 justify-content-between col">
+        <label class="col-sm-4" for="FirstName">First Name: </label>
+        <input asp-for="FirstName" class="col-sm-8">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="d-flex align-items-baseline mb-3 justify-content-between col">
+        <label class="col-sm-4" for="LastName">Last Name: </label>
+        <input asp-for="LastName" class="col-sm-8">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="d-flex align-items-baseline mb-3 justify-content-between col">
+        <label class="col-sm-4" for="Email">Email: </label>
+        <input asp-for="Email" class="col-sm-8">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="d-flex align-items-baseline mb-3 justify-content-between col">
+        <label class="col-sm-4" for="Phone">Phone: </label>
+        <input asp-for="Phone" class="col-sm-8">
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="d-flex align-items-baseline mb-3 justify-content-between col">
+        <label class="col-sm-4" for="Password">Password: </label>
+        <input asp-for="Password" class="col-sm-8">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="d-flex align-items-baseline mb-3 justify-content-between col">
+        <label class="col-sm-4" for="CFPass">Confirm PW: </label>
+        <input asp-for="CFPass" class="col-sm-8">
+        <span asp-validation-for="CFPass" class="text-danger"></span>
+    </div>
+    <div class="col d-flex justify-content-end">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,242 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  width: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.adddish{
+  background-image: url('../images/adddish.jpg');
+  /* background-color: red; */
+  min-height: 99vh;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: black;
+  /* opacity: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.appetizers{
+  background-image: url('../images/appetizers.jpg');
+  /* background-color: red; */
+  min-height: 99vh;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: black;
+  /* opacity: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.dessert{
+  background-image: url('../images/dessert.jpg');
+  /* background-color: red; */
+  min-height: 99vh;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: black;
+  /* opacity: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.restaurant{
+  background-image: url('../images/restaurant.jpg');
+  /* background-color: red; */
+  min-height: 99vh;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: black;
+  /* opacity: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.restaurant2{
+  background-image: url('../images/restaurant2.jpg');
+  /* background-color: red; */
+  min-height: 99vh;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: black;
+  /* opacity: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.entree{
+  background-image: url('../images/entree.jpeg');
+  /* background-color: red; */
+  min-height: 99vh;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: black;
+  /* opacity: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.opacity-dark{
+  background-color: rgba(0,0,0,0.5)
+}
+.fullHeight{
+  min-height: 90vh;
+}
+
+* {box-sizing: border-box}
+
+.slideshow-container{
+  min-width: 100vh;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.headline{
+  background-color: rgba(0,0,0,0.7);
+  width: fit-content;
+  font-family: Garamond, serif;
+  font-style: italic;
+  border-radius: 25px;
+
+}
+.introduction{
+  font-family: Courier, Monaco, monospace;
+  width: fit-content;
+  max-width: 900px;
+  background-color: rgba(0,0,0,0.9);
+  font-size: x-large;
+  border-radius: 25px;
+}

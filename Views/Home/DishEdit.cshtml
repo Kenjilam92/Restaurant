@@ -1,0 +1,50 @@
+@model Dish
+<div class="w-100 restaurant2 p-5"> 
+    <div class="d-flex flex-column align-items-center text-white opacity-dark fullHeight">
+    <h1 class="mb-5">Update your dish</h1>
+    <form action="/dish/update/@Model.DishId" method="post" class="col ">
+        <div class="mb-3 row">
+            <label class="col-sm-4" for="DishName">DishName: </label>
+            <input asp-for="DishName" class="col-sm-8 form-control">
+        </div>
+        <p class="text-right text-warning">
+            <span asp-validation-for="DishName"></span>
+        </p>
+        <div class="mb-3 row">
+            <label class="col-sm-4" for="Price">Price: </label>
+            <input asp-for="Price" class="col-sm-8 form-control">
+        </div>
+        <p class="text-right text-warning">
+            <span asp-validation-for="Price"></span>
+        </p>
+        <div class="mb-3 row">
+            <label class="col-sm-4" for="Ingredients">Ingredients: </label>
+            <input asp-for="Ingredients" class="col-sm-8 form-control">
+        </div>
+        <p class="text-right text-warning">
+            <span asp-validation-for="Ingredients"></span>
+        </p>
+        <div class="mb-3 row">
+            <label class="col-sm-4" for="Description">Description: </label>
+            <textarea asp-for="Description" type="textarea" rows="4" class="col-sm-8 form-control"></textarea>
+        </div>
+        <p class="text-right text-warning">
+            <span asp-validation-for="Description"></span>
+        </p>
+        <div class="mb-3 row">
+            <label class="col-sm-4" for="Type">Type: </label>
+            <select asp-for="Type" class="col-sm-8 form-control">
+                <option value="Appetizers">Appetizers</option>    
+                <option value="Entrées">Entrées</option>
+                <option value="Desserts">Desserts</option>
+            </select>
+        </div>
+        <p class="text-right text-warning">
+            <span asp-validation-for="Type"></span>
+        </p>
+        <div class="col d-flex justify-content-end">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    </div>
+</div>
